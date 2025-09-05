@@ -1,0 +1,15 @@
+gradle-local.properties
+/bundles/
+/client-extensions/*/build/
+/client-extensions/*/dist/
+/node_modules/
+/node_modules_cache/
+/build/
+/.gradle/
+
+**/elasticsearch7
+**/.DS_Store
+**/build
+**/dist
+**/@vite
+**/adaptive
