@@ -21,7 +21,7 @@ clarity-custom-element-distributor-table {
 
 	table {
 		width: 100%;
-	    border-color: rgb(137.0039847358, 167.3835509521, 224.0000152642);
+	    border-color: #89A7E0;
 	    border-width: 1px;
 	    border-style: solid;
 
@@ -31,7 +31,12 @@ clarity-custom-element-distributor-table {
 		}
 
 		tr:nth-child(even) {
-		  background-color: rgb(237.9950653899, 242.1868927366, 249.9989346101);
+		  background-color: #EEF2FA;
+		}
+	
+		img {
+			height: 3rem;
+			width: auto;
 		}
 	}
 }
