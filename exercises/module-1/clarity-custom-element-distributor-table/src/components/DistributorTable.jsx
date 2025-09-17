@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ClayTable from '@clayui/table';
-import ClayButton from '@clayui/button';
 
 const DistributorTable = () => {
     const [distributors, setDistributors] = useState([]);
