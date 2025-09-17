@@ -1,11 +1,11 @@
 assemble:
     - from: build/vite
       into: static
-clarity-custom-element-distributor-table:
+clarity-distributor-table-custom-element:
     cssURLs:
         - assets/*.css
-    friendlyURLMapping: clarity-custom-element-distributor-table
-    htmlElementName: clarity-custom-element-distributor-table
+    friendlyURLMapping: clarity-distributor-table-custom-element
+    htmlElementName: clarity-distributor-table-custom-element
     instanceable: false
     name: Clarity Distributor Table
     portletCategoryName: category.client-extensions

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: '/o/clarity-custom-element-distributor-table',
+	base: '/o/clarity-distributor-table-custom-element',
 	plugins: [react()],
 	build: {
 		sourcemap: true,
@@ -19,7 +19,7 @@ export default defineConfig({
 
 	experimental: {
 		renderBuiltUrl(filename) {
-			return `/o/clarity-custom-element-distributor-table/${filename}`;
+			return `/o/clarity-distributor-table-custom-element/${filename}`;
 		},
 	},
 
