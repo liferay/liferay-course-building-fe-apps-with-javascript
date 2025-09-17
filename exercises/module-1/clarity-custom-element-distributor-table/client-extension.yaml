@@ -1,0 +1,15 @@
+assemble:
+    - from: build/vite
+      into: static
+clarity-custom-element-distributor-table:
+    cssURLs:
+        - assets/*.css
+    friendlyURLMapping: clarity-custom-element-distributor-table
+    htmlElementName: clarity-custom-element-distributor-table
+    instanceable: false
+    name: Clarity Distributor Table
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - assets/*.js
+    useESM: true
