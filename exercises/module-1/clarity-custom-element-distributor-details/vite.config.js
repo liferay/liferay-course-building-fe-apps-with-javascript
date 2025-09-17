@@ -8,6 +8,7 @@ export default defineConfig({
 		jsxRuntime: 'classic',
 	})],
 	build: {
+		sourcemap: true,
 		outDir: 'build/vite',
 		rollupOptions: {
 			external: [
@@ -15,5 +16,9 @@ export default defineConfig({
 				'react-dom'
 			],
 		}
+	},
+
+	server: {
+		sourcemapIgnoreList: false // Shows correct file paths in dev tools
 	}
 })

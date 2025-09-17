@@ -23,7 +23,8 @@ const Map = () => {
 
     const handleMarkerClick = (markerId) => {
         setActiveMarker(markerId);
-        Liferay.fire('selectDistributor', locations[markerId]);
+        
+        Liferay.fire('selectDistributor', locations.find(location => location.id === markerId));
     };
 
     const handleMouseOver = (markerId) => {
