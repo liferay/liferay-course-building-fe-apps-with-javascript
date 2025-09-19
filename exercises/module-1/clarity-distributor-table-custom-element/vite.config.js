@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
 	base: '/o/clarity-distributor-table-custom-element',
-	plugins: [react()],
+	plugins: [react({
+		jsxRuntime: 'classic',
+	})],
 	build: {
 		sourcemap: true,
 		outDir: 'build/vite',
@@ -13,8 +15,7 @@ export default defineConfig({
 				'react',
 				'react-dom'
 			],
-		},
-
+		}
 	},
 
 	experimental: {
