@@ -18,30 +18,6 @@ class WebComponent extends HTMLElement {
     this.root = createRoot(this.mountPoint);
 
     this.renderReact();
-
-    this.mo = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (m.type === "childList") {
-          const nodes = [...m.addedNodes, ...m.removedNodes];
-          if (nodes.some((n) => n.nodeType === 1 && n.matches?.("map-item"))) {
-            this.renderReact();
-            break;
-          }
-        }
-
-        if (m.type === "attributes" && m.target?.matches?.("map-item")) {
-          this.renderReact();
-          break;
-        }
-      }
-    });
-
-    this.mo.observe(this, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["slot", "id", "latitude", "longitude"],
-    });
   }
 
   disconnectedCallback() {

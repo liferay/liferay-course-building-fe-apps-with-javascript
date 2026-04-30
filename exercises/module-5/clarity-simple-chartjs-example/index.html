@@ -5,48 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-
-    <script type="text/javascript">
-
-      (function () {
-          if (!window.Liferay) {
-              window.Liferay = {};
-          }
-          
-          if (!window.Liferay.Util) {
-              window.Liferay.Util = {};
-          }
-
-          if (!window.Liferay.Icons) {
-              window.Liferay.Icons = {};
-          }
-
-          window.Liferay.Util.fetch = function (url, options = {}) {
-              const basicAuth = "Basic " + btoa("admin@clarityvisionsolutions.com:learn");
-
-              const headers = new Headers(options.headers || {});
-              headers.set("Authorization", basicAuth);
-
-              return fetch(url, {
-                  ...options,
-                  headers,
-              });
-          };
-
-          window.Liferay.Icons.spritemap = "/icons.svg";
-      })();
-
-    </script>
   </head>
   <body>
-    <liferay-chartjs 
-      title="Clarity Distributors"
-      dataset-label="Status"
-      aggregation-field="tier.key"
-      aggregation-type="count"
-      rest-context-path="http://localhost:8080/o/c/distributorlocations/"
-      color="rgba(255, 99, 132, 0.5)"
-    ></liferay-chartjs>
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>

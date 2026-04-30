@@ -68,7 +68,7 @@ const Map = ({ items }) => {
                             {hoveredMarker === item.id && (
                                 <Tooltip direction="top" offset={[0, -8]} opacity={1} permanent>
                                     <div style={{ whiteSpace: 'normal' }}>
-                                        <slot name={`item-${item.id}`} />
+
                                     </div>                                        
                                 </Tooltip>
                             )}

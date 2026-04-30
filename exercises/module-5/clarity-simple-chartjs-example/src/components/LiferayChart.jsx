@@ -9,34 +9,6 @@ const LiferayChart = ({ title, datasetLabel, aggregationField, aggregationType, 
     const pageSize = 2;
     const runIdRef = useRef(0);
 
-    function getValue(obj, path) {
-        if (!path.includes(".")) {
-            return obj?.[path];
-        }
-
-        return path.split(".").reduce((o, k) => o?.[k], obj);
-    }
-
-    function countBy(array, path) {
-        return array.reduce((acc, item) => {
-            const value = getValue(item, path);
-            if (!value) return acc;
-
-            acc[value] = (acc[value] || 0) + 1;
-            return acc;
-        }, {});
-    }
-
-    function mergeCounts(a = {}, b = {}) {
-        const result = { ...a };
-
-        for (const [key, value] of Object.entries(b)) {
-            result[key] = (result[key] || 0) + value;
-        }
-
-        return result;
-    }
-
     function fetchData(page, currentCountAggregation, runId) {
         window.Liferay.Util.fetch(`${restContextPath}?fields=${aggregationField}&page=${page}&pageSize=${pageSize}`)
         .then(response => {
